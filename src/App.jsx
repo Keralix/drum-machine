@@ -55,13 +55,13 @@ function App() {
     const clip = audioClips.find((clip)=> clip.keyTrigger===e.key.toUpperCase())
     if(!clip) return;
     document.getElementById(clip.keyTrigger).play();
-    document.getElementById("display").innerHTML=clip.description
+    document.getElementById("display").innerHTML=`<p>${clip.description}</p>`
   }
   document.addEventListener("keypress",playAudio)
   return (
     <div className="container" id="drum-machine">
       <h1>Drum machine</h1>
-      
+      <div className="drum">
       <div className="drum-set">
         {audioClips.map((clip)=>
           <Drum audioClip={clip} key={clip.keyTrigger}/>
@@ -69,7 +69,7 @@ function App() {
       </div>
       <div className="display" id="display"></div>
     </div>
-
+    </div>
   )
 }
 
