@@ -2,12 +2,12 @@
   "name": "drum-machine",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://keralix.github.io/drum-machine/",
   "type": "module",
   "scripts": {
+
+    "dev": "vite",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
